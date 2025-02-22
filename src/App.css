@@ -17,7 +17,7 @@ body, html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2px 20px; 
+  padding: 2px 20px; /* Add some padding */
   text-decoration: none;
   z-index: 1000;
 }
@@ -31,9 +31,9 @@ body, html {
 }
 
 .prt1 {
- 
+  /* width: 11.5%; */
   display: flex;
-  
+  /* justify-content: flex-end; */
   align-items: center;
 }
 
@@ -43,7 +43,7 @@ body, html {
 }
 
 .prt2{
-  width: 30%; 
+  width: 30%; /* Ensure they take appropriate space */
   display: none;
   justify-content: flex-start;
   list-style: none;
@@ -52,7 +52,7 @@ body, html {
 }
 .prt3{
   position: relative;
-  width: 31%; 
+  width: 31%; /* Ensure they take appropriate space */
   display: none;
   justify-content: flex-start;
   list-style: none;
@@ -61,7 +61,7 @@ body, html {
 
 .prt2 ul, .prt3 ul {
   display: flex;
-  gap: 18px; 
+  gap: 18px; /* Add spacing between list items */
   list-style: none;
   padding: 0;
   margin: 0;
@@ -87,14 +87,14 @@ body, html {
   display: flex;
   gap: 20px;
 }
-
+/* Position search bar inside navbar */
 
 .search-container {
   display: flex;
   align-items: center;
   height: 50px;
   width: 1250px;
-
+  /* max-width: 800px; */
   background: white;
   padding: 10px;
   border: 1px solid black;
@@ -105,7 +105,7 @@ body, html {
   transform: translate(-50%, -50%);
 }
 
-
+/* Input Field */
 .search-bar {
   
   flex-grow: 1;
@@ -115,7 +115,7 @@ body, html {
   outline: none;
 }
 
-
+/* Close Button */
 .close-icon {
   font-size: 24px;
   cursor: pointer;
@@ -144,13 +144,13 @@ body, html {
   font-size: 14px;
 }
 
-
+/* Dropdown Styles */
 .dropdown-menu {
   height: auto;
   position: absolute;
   top: 100%;
   left: -850px;
-  
+  /* width: 100vw; */
   background-color: #f2f2f2;
   padding: 20px;
   display: flex;
@@ -289,33 +289,34 @@ body, html {
   cursor: pointer;
 }
 
-
+/* Image inside .hero */
 .hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-
+/* Overlay for better text readability */
 .hero::after {
   content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0); 
+  background: rgba(0, 0, 0, 0); /* Dark overlay */
   display: none;
 }
 
-
+/* Centering text inside .hero */
 .hero-content {
   width: 90%;
   max-width: 600px;
   display: flex;
   flex-direction: column;
-
+  /* align-content: center; */
+  /* position: absolute; */
   text-align: start;
   color: black;
-  z-index: 10; 
+  z-index: 10; /* Ensures text is above overlay */
   font-size: 16px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 20px;
@@ -323,7 +324,7 @@ body, html {
   margin: 15px 0px;
 }
 
-
+/* Title */
 .hero-content h2 {
   color: #000;
   font-size: 28px;
@@ -333,19 +334,19 @@ body, html {
   line-height: 1.2;
 }
 
-
+/* Description */
 .hero-content p {
   font-size: 14px;
-  color: black; 
+  color: black; /* Light gray for better contrast */
   margin-bottom: 15px;
 }
-
+/* Button Styling */
 .hero-content a button {
   padding: 10px 20px;
   font-size: 14px;
   font-weight: 500;
   color: white;
-  background: #0067b8; 
+  background: #0067b8; /* Primary blue */
   border: none;
   cursor: pointer;
   margin: 8px 0px;
@@ -358,75 +359,78 @@ body, html {
 }
 @media (min-width: 768px) {
   .hero {
-    height: 475px; 
-    flex-direction: row; 
+    height: 475px; /* Fixed height for larger screens */
+    flex-direction: row; /* Revert to default layout */
   }
 
   .hero img {
-    height: 100%; 
+    height: 100%; /* Full height for larger screens */
   }
 
   .hero::after {
-    display: block;
+    display: block; /* Show overlay on larger screens */
   }
 
   .hero-content {
-    width: 32%; 
+    width: 32%; /* Adjusted for larger screens */
     max-width: none;
     position: absolute;
     left: 24%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: transparent; 
+    background: transparent; /* Remove background for larger screens */
    
     padding: 35px 0px;
   }
 
   .hero-content h2 {
-    font-size: 38px; 
+    font-size: 38px; /* Adjusted for larger screens */
   }
 
   .hero-content p {
-    font-size: 16px; 
+    font-size: 16px; /* Adjusted for larger screens */
   }
 
   .hero-content a button {
-    font-size: 16px; 
+    font-size: 16px; /* Adjusted for larger screens */
   }
 }
-
+/* .ht{
+  position: relative;
+  z-index: 10;
+} */
 .listm {
   display: flex;
   flex-direction: column;
   height: auto;
   justify-content: center;
   margin-top: 25px;
-  padding: 0px 20px;
+  padding: 0px 20px; /* Adjusted padding for smaller screens */
 }
 
 .trip-list {
-  height: auto; 
+  height: auto; /* Adjusted for responsiveness */
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; 
-  gap: 20px; 
+  justify-content: center; /* Center cards on smaller screens */
+  gap: 20px; /* Added gap between cards */
   padding: 10px 0px;
 }
 
 .trip-list h1 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 28px;
+  font-size: 28px; /* Adjusted for smaller screens */
   font-weight: 500;
   width: 100%;
-  padding: 0px 20px; 
-  text-align: center; 
+  padding: 0px 20px; /* Adjusted padding for smaller screens */
+  text-align: center; /* Center the heading */
 }
 
 .trip-card {
   background: white;
-  width: 100%; 
-  max-width: 325px; 
-  height: auto;
+  width: 100%; /* Full width on smaller screens */
+  max-width: 325px; /* Maximum width for larger screens */
+  height: auto; /* Adjusted for responsiveness */
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
   text-align: start;
   transition: all 0.3s;
@@ -437,12 +441,12 @@ body, html {
 
 .trip-card:hover {
   cursor: pointer;
-  transform: translateY(-5px); 
+  transform: translateY(-5px); /* Add hover effect */
   box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .trip-image {
-  height: 200px; 
+  height: 200px; /* Fixed height for images */
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -450,8 +454,8 @@ body, html {
 }
 
 .trip-name {
-  padding: 10px 20px;
-  font-size: 24px;
+  padding: 10px 20px; /* Adjusted padding for smaller screens */
+  font-size: 24px; /* Adjusted for smaller screens */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
   color: #000;
@@ -460,8 +464,8 @@ body, html {
 
 .trip-duration {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 0px 20px;
-  font-size: 14px;
+  padding: 0px 20px; /* Adjusted padding for smaller screens */
+  font-size: 14px; /* Adjusted for smaller screens */
   font-weight: 400;
   line-height: 1.4;
   color: black;
@@ -469,56 +473,56 @@ body, html {
 }
 
 .herobtn {
-  padding: 10px 20px;
-  font-size: 14px; 
+  padding: 10px 20px; /* Adjusted padding for smaller screens */
+  font-size: 14px; /* Adjusted for smaller screens */
   font-weight: 500;
   color: white;
   background: #0067b8;
   border: none;
   cursor: pointer;
-  margin: 0px 20px; 
+  margin: 0px 20px; /* Adjusted margin for smaller screens */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-top: 10px;
   text-align: center;
-  width: calc(100% - 40px); 
+  width: calc(100% - 40px); /* Full width minus padding */
 }
 
 .herobtn:hover {
   background-color: #004a7f;
 }
 
-
+/* Media Queries for Responsiveness */
 @media (min-width: 768px) {
   .listm {
     height: 700px;
-    padding: 0px 50px; 
+    padding: 0px 50px; /* Revert padding for larger screens */
   }
 
   .trip-list h1 {
-    font-size: 38px;
-    padding: 0px 26px; 
-    text-align: start; 
+    font-size: 38px; /* Revert font size for larger screens */
+    padding: 0px 26px; /* Revert padding for larger screens */
+    text-align: start; /* Align heading to the start */
   }
 
   .trip-card {
-    width: 325px;
-    height: 500px; 
+    width: 325px; /* Revert width for larger screens */
+    height: 500px; /* Revert height for larger screens */
   }
 
   .trip-name {
-    font-size: 29px; 
-    padding: 10px 25px;
+    font-size: 29px; /* Revert font size for larger screens */
+    padding: 10px 25px; /* Revert padding for larger screens */
   }
 
   .trip-duration {
-    font-size: 16px; 
-    padding: 0px 25px; 
+    font-size: 16px; /* Revert font size for larger screens */
+    padding: 0px 25px; /* Revert padding for larger screens */
   }
 
   .herobtn {
-    font-size: 16px;
-    padding: 10px 12px; 
-    margin: 10px 23px;
+    font-size: 16px; /* Revert font size for larger screens */
+    padding: 10px 12px; /* Revert padding for larger screens */
+    margin: 10px 23px; /* Revert margin for larger screens */
   }
 }
 .hero3 {
@@ -529,60 +533,62 @@ body, html {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  padding: 20px 20px; 
+  padding: 20px 20px; /* Adjusted padding for smaller screens */
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  flex-direction: column; /* Stack content below image on mobile */
+  align-items: center; /* Center content horizontally */
 }
 
 .hero3:hover {
   cursor: pointer;
 }
 
-
+/* Image inside .hero */
 .hero3 img {
   width: 99%;
-  height: 150px;
+  height: 150px; /* Ensure image scales properly */
   
 }
 
-
+/* Centering text inside .hero */
 .hero3-content {
-  width: 99%; 
-  max-width: 500px; 
+  width: 99%; /* Full width on smaller screens */
+  max-width: 500px; /* Maximum width for larger screens */
   display: flex;
   flex-direction: column;
-  text-align: center; 
+  text-align: center; /* Center text on smaller screens */
   color: black;
   z-index: 10;
   font-size: 16px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 20px;
-  background: white; 
+  background: white; /* Add background for card effect */
   
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for card effect */
+   /* Adjust spacing between image and content */
 }
 
-
+/* Title */
 .hero3-content h2 {
-  font-size: 28px; 
+  font-size: 28px; /* Adjusted for smaller screens */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 500;
   margin-bottom: 15px;
   line-height: 1.2;
-  color: black; 
+  color: black; /* Text color for smaller screens */
 }
 
-
+/* Description */
 .hero3-content p {
-  font-size: 14px; 
-  color: black; 
+  font-size: 14px; /* Adjusted for smaller screens */
+  color: black; /* Text color for smaller screens */
   margin-bottom: 15px;
 }
 
+/* Button Styling */
 .hero3-content a button {
   padding: 10px 20px;
-  font-size: 14px;
+  font-size: 14px; /* Adjusted for smaller screens */
   font-weight: 500;
   color: white;
   background: #0067b8;
@@ -596,45 +602,47 @@ body, html {
   background: #004a7f;
 }
 
-
+/* Media Queries for Larger Screens */
 @media (min-width: 768px) {
   .hero3 {
-    padding: 0px 70px;
+    padding: 0px 70px; /* Revert padding for larger screens */
     flex-direction: row; /* Revert to default layout */
-    align-items: flex-start;
+    align-items: flex-start; /* Align content to the top */
   }
 
   .hero3 img {
-    height: 500px; 
-    object-fit: cover;
+    height: 500px; /* Fixed height for larger screens */
+    object-fit: cover; /* Ensure image covers the area */
+     /* Rounded corners for image */
   }
 
   .hero3-content {
-    width: 32%; 
+    width: 32%; /* Adjusted for larger screens */
     max-width: none;
     position: absolute;
     left: 77%;
     top: 48%;
     transform: translate(-50%, -50%);
-    text-align: start;
-    background: transparent; 
-    color: white; 
+    text-align: start; /* Align text to the start */
+    background: transparent; /* Remove background for larger screens */
+    color: white; /* Text color for larger screens */
     padding: 35px 0px;
-    box-shadow: none; 
+    box-shadow: none; /* Remove shadow for larger screens */
+     /* Remove rounded corners for larger screens */
   }
 
   .hero3-content h2 {
-    font-size: 38px; 
-    color: white;
+    font-size: 38px; /* Revert font size for larger screens */
+    color: white; /* Text color for larger screens */
   }
 
   .hero3-content p {
-    font-size: 16px; 
-    color: white; 
+    font-size: 16px; /* Revert font size for larger screens */
+    color: white; /* Text color for larger screens */
   }
 
   .hero3-content a button {
-    font-size: 16px; 
+    font-size: 16px; /* Revert font size for larger screens */
   }
 }
 .herobtn2{
@@ -644,13 +652,13 @@ body, html {
   text-align: start;
   line-height: 1;
   color: white;
-  background: #0067b8;
+  background: #0067b8; /* Primary blue */
   border: none;
   cursor: pointer;
   padding: 10px 12px;
   margin: 0px 23px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: 10px; 
+  margin-top: 10px; /* Pushes button to bottom */
 }
 .herobtn2:hover{
   background-color: #004a7f;
@@ -658,9 +666,9 @@ body, html {
   margin: 20px 0px;
   width: 95%;
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  gap: 20px; 
+  flex-direction: column; /* Stack content vertically on smaller screens */
+  align-items: center; /* Center content horizontally */
+  gap: 20px; /* Add gap between stacked items */
   padding: 10px 0px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -668,24 +676,24 @@ body, html {
 .flt h2 {
   font-weight: normal;
   font-size: 16px;
-  margin: 0; 
+  margin: 0; /* Remove default margin */
 }
 
 .follow {
   display: flex;
-  justify-content: center; 
+  justify-content: center; /* Center content horizontally */
   align-items: center;
-  gap: 20px;
+  gap: 20px; /* Add gap between icons and text */
 }
 
 .follow svg {
   font-size: 20px;
-  cursor: pointer;
-  transition: color 0.3s ease;
+  cursor: pointer; /* Add pointer cursor for interactivity */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 .follow svg:hover {
-  color: #0067b8;
+  color: #0067b8; /* Change color on hover */
 }
 
 .foot_p1 {
@@ -699,28 +707,29 @@ body, html {
   padding: 0px 20px;
   font-weight: 500;
   gap: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  cursor: pointer; /* Add pointer cursor for interactivity */
+  transition: background-color 0.3s ease; /* Smooth background transition on hover */
 }
 
 .foot_p1:hover {
-  background-color: #c0c0c0; 
+  background-color: #c0c0c0; /* Change background color on hover */
 }
 
+/* Media Queries for Larger Screens */
 @media (min-width: 768px) {
   .flt {
-    flex-direction: row; 
-    justify-content: space-between; 
-    align-items: center; 
+    flex-direction: row; /* Revert to horizontal layout */
+    justify-content: space-between; /* Space out items */
+    align-items: center; /* Align items vertically */
   }
 
   .follow {
-    justify-content: start; 
-    gap: 30px; 
+    justify-content: start; /* Align items to the start */
+    gap: 30px; /* Increase gap between icons and text */
   }
 
   .follow svg {
-    margin-left: 30px; 
+    margin-left: 30px; /* Add margin between icons */
   }
 }
 .foot_p1:hover{
@@ -733,35 +742,36 @@ body, html {
   font-size: 20px; 
   display: flex; 
   margin-left: 0px;
-}.foot {
-  height: auto; 
+}
+.foot {
+  height: auto; /* Adjusted for responsiveness */
   background-color: #f2f2f2;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 20px 0; 
+  padding: 20px 0; /* Added padding for better spacing */
 }
 
 .foot_p2 {
   width: 100%;
   color: #616161;
-  height: auto; 
+  height: auto; /* Adjusted for responsiveness */
   display: flex;
-  flex-wrap: wrap; 
-  justify-content: space-around; 
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+  justify-content: space-around; /* Adjusted for better spacing */
   font-size: 11px;
   font-weight: 500;
-  padding: 10px 0; 
+  padding: 10px 0; /* Adjusted padding */
   line-height: 1.5;
 }
 
 .foot_p2 ul {
-  margin-top: 20px; 
-  width: 45%; 
-  padding: 0 10px; 
+  margin-top: 20px; /* Adjusted margin */
+  width: 45%; /* Adjusted width for smaller screens */
+  padding: 0 10px; /* Added padding for better spacing */
 }
 
 .foot_p2 ul p {
   font-size: 15px;
-  margin-bottom: 10px; 
+  margin-bottom: 10px; /* Added margin for better spacing */
 }
 
 .foot_p2 ul a {
@@ -769,7 +779,8 @@ body, html {
   color: #616161;
   display: block;
   font-size: 11px;
-  margin-top: 10px;
+  margin-top: 10px; /* Adjusted margin */
+}
 
 .foot_p2 ul a:hover {
   cursor: pointer;
@@ -781,20 +792,20 @@ body, html {
   background-color: #f2f2f2;
   color: #616161;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column; /* Stack content vertically on smaller screens */
   align-items: center;
   justify-content: center;
-  padding: 20px 10px; 
+  padding: 20px 10px; /* Adjusted padding */
   padding-bottom: 40px;
 }
 
 .foots ul {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
   align-items: center;
   justify-content: center;
-  gap: 10px; 
-  margin-top: 10px; 
+  gap: 10px; /* Adjusted gap */
+  margin-top: 10px; /* Adjusted margin */
 }
 
 .foots ul a {
@@ -805,34 +816,34 @@ body, html {
 
 .foots ul svg {
   align-items: center;
-  font-size: 16px; 
-  margin-right: 5px; 
+  font-size: 16px; /* Adjusted font size */
+  margin-right: 5px; /* Adjusted margin */
 }
 
-
+/* Media Queries for Larger Screens */
 @media (min-width: 768px) {
   .foot_p2 {
-    justify-content: space-evenly; 
+    justify-content: space-evenly; /* Revert to original spacing */
   }
 
   .foot_p2 ul {
-    width: auto; 
-    padding: 0; 
+    width: auto; /* Revert to original width */
+    padding: 0; /* Remove padding */
   }
 
   .footf {
-    flex-direction: row; 
-    justify-content: space-between; 
-    padding: 0px 100px; 
+    flex-direction: row; /* Revert to horizontal layout */
+    justify-content: space-between; /* Revert to original spacing */
+    padding: 0px 100px; /* Revert to original padding */
   }
 
   .foots ul {
-    flex-wrap: nowrap; 
-    gap: 20px; 
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    gap: 20px; /* Revert to original gap */
   }
 
   .foots ul svg {
-    font-size: 20px; 
-    margin-right: 7px;
+    font-size: 20px; /* Revert to original font size */
+    margin-right: 7px; /* Revert to original margin */
   }
-}}
+}
